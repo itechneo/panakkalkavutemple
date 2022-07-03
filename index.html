@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PanakkalKavu Devi Temple</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 50%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+   .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 40px;
+  }
+  .modal-header, .modal-body {
+    padding: 50px 70px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    padding: 40px 50px;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 1;
+    position:static;
+    font-size: 12px !important;
+    letter-spacing: 4px;
+    opacity: 3;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button> 
+      <a class="navbar-brand" href="#myPage"><b><strong>...PANAKKALKAVU DEVI TEMPLE...</strong></b><br><p><font color="blue">( Under Travancore DevasomBoard )</font></p></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">Home</a></li>
+        <li><a href="#myPage">Pooja Timings</a></li>
+        <li><a href="#myPage">Offerings</a></li>
+        <li><a href="#myPage">Contact</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gallery
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#myPage">Temple Photos</a></li>
+            <li><a href="#myPage">Special Occasions</a></li>
+            <li><a href="#myPage">Temple Programs</a></li> 
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">About
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="http://travancoredevaswomboard.org/">About Devasom Board</a></li>
+            <li><a href="#myPage">Temple Customs</a></li>
+            <li><a href="#myPage">Temple Festivals</a></li>
+            </ul>
+        </li>
+        <li><a href="https://www.facebook.com/PanakkalKavu-Devi-Temple-110134774974411/about/?ref=page_internal"><button type="submit"><strong><font color="black">fb </font></strong></button></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="h1.jpg" alt="devi" width="1024" height="500">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+      <div class="item">
+        <img src="h2.jpg" alt="devid" width="1024" height="500">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+      <div class="item">
+        <img src="h3.jpg" alt="devig" width="1024" height="500">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+      <div class="item">
+        <img src="h4.jpg" alt="devif" width="1024" height="500">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section)--> 
+<div id="band" class="container text-center">
+  <!--<h3>History </h3><p>description about temple</p>
+  <p><em>POOJA TIMINGS</em></p>
+  <p>4.00am-Blowing of conch 4.45am-Temple opens-Entry for darshan - Nirmalyam, Vakacharthu, Oil abhishekam, Malarnivedyam etc.5.00 amGanapathy Homam/Koottu Ganapathy Homam6.45 am to 7.45 amRigveda Dhara to Lord Shiva and Lord Vishnu8.00 amUshapooja, Nivedyam10.00 am to 11.00 amMaha mrithyunjaya Homa, Karuka Homa, Thila Homa, Ayushya Homa, Rahu Pooja, Naga Pooja, Rakshassu Pooja12.00 pm to 12.30 pmNoon Poojas4.45 pmTemple opens for evening poojas6.00 pmDeeparadhana, Arathi6.30 to 7.00 pmUma Maheswara Pooja, Bhagavathy Seva, Dambathy Pooja7.30 pm to 8.30 pmAthazha Pooja - Night Pooja8.30 pmTemple closes</p>
+  <br>-->
+
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Thanthri</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="thanthri.jpg" class="img-circle person" alt="Random Name" width="200" height="200">
+        <p>Bhramashree Perinjerimana Vasudevan Namboothirippad</p>
+      </a>
+      <div id="demo" class="collapse">
+        <p>Description here</p>
+        
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>President</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="president.jpg" class="img-circle person" alt="Random Name" width="200" height="200">
+        <p>Sri C Ramesh Kunnel</p>
+    </a>
+      <div id="demo2" class="collapse">
+        <p>Description here</p>
+        
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Secretary</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="secretary.jpg" class="img-circle person" alt="Random Name" width="200" height="200">
+        <p>Sri Sivadas Madathilparambil</p>
+        </a>
+      <div id="demo3" class="collapse">
+        <p>Description here</p>
+        <p></p>
+        <p></p>
+        </div>
+     </div>
+    <div class="col-sm-3">
+      <p class="text-center"><strong>Vice President</strong></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="vice.jpg" class="img-circle person" alt="Random Name" width="200" height="200">
+        <p>Sri Sajimon</p>
+      </a>
+      <div id="demo4" class="collapse">
+        <p>Description here</p>
+        
+      </div>
+    </div>
+    <!--<div class="col-sm-4">
+      <p class="text-center"><strong>Committee Members</strong></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="people/member.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        
+      </a>--><!--
+      <div id="demo4" class="collapse">
+        <p>Description here</p>
+      -->
+      </div>
+    </div>
+    <!--<div class="col-sm-3">
+      <p class="text-center"><strong>Vice President</strong></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="people/vice.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <p>Sri Sajimon</p>
+      </a>
+      <div id="demo4" class="collapse">
+        <p>Description here</p>
+        
+      </div>
+    </div>-->
+  </div>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h2 class="text-center">--Temple Programs--</h2>
+    <p class="text-center"><br></p>
+    <ul class="list-group">
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="meenabharani.jpg" alt="meenabharani" width="300" height="200">
+          <p><strong>Meenabharani Ulsavam</strong></p>
+          <p>Bharani is a folk ritual that commemorates the tale of a godly revenge, observed annually in most of the temples of Kerala. During the festival devotees assemble in large numbers. The frenzied atmosphere, intense forms of expressions and significant departures from human mannerisms from the otherwise divine air constitutes  a unique sight, year after year.</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="navarathri.jpg" alt="Navarathri" width="300" height="200">
+          <p><strong>Navarathri</strong></p>
+          <p>Navaratri is a Hindu festival that spans over nine nights (and ten days) and is celebrated every year in the autumn season. It is observed for different reasons and celebrated differently in various parts of the Hindu Indian cultural sphere.<br><br><br><br></p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="pongala.jpg" alt="pongala" width="300" height="200">
+          <p><strong>Pongala Ulsavam</strong></p>
+          <p>Pongala is a harvest festival of Kerala and Tamil Nadu. The name 'Pongala' means 'to boil over' and refers to the ritualistic offering of porridge made of rice, sweet brown molasses, coconut gratings, nuts and raisins. Generally women devotees participate in this ritual.<br><br><br></p>
+        </div>
+      </div>
+    </div>
+</div>
+  
+  
+    
+      
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em></em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>PanakkalKavu Devi Temple, Vakathanam P.O, Kottayam - 686538 Kottayam, Kerala, South India.</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +919447367966</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: panakkalkavudevitemple@gmail.com</p>
+      <p> Account Number:12345678<br>IFSC Code:fed1234</p>
+      <p></p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h3 class="text-center">Near By Attractions</h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Manikandapuram SreeKrishna Temple</a></li>
+    <li><a data-toggle="tab" href="#menu1">Vakathanam Valiyapalli</a></li>
+    <li><a data-toggle="tab" href="#menu2">Panachikkadu Dakshina Mookambika Temple </a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Manikandapuram SreeKrishna Temple</h2><img src="manikandapuram.jpg" width="300" height="200">
+      <p>The Manikandapuram Sreekrishna Temple was built in the 12th century by Thekkumkur king Eravi Manikanda Varman (reign: 1150 - 1180 C.E). The construction of the temple and the installation of the idol of Lord Krishna took place on the 25th day of Malayalam month Medam (Meṣa) in Kollam Era 325 (1150 C.E).[3][4] The king would take part in the annual festival of Vennimala Sree Rama Lakshmana Swamy Temple. During the royal hunting (Pallivetta) in the temple, the king Eravi Manikandan shot an animal he saw, but it was a cow. The Manikandapuram Temple was built by King Manikandan for his atonement, knowing that he killed a cow.[5][6][7][8]
+
+        There is evidence that the fort and the tunnels were at Manikandapuram, as were the later headquarters of the Thekkumkur monarchy at Changanassery and Thaliyanthanapuram (Kottayam).[9] The temple was very popular in the Thekkumkur dynasty. References to this temple are found in Aithihyamala of Kottarathil Sankunni and Unnuneeli Sandesam, the classics of Malayalam Literature.<br>The Malayalam poem Unnuneeli Sandesam describes the ancient Manikandapuram and Sreekrishna temple. In this poem, the temple and the underground passages connecting Venimala and Manikandapuram are explicit. There is depression in Manikandapuram, which looks like the entrance to a tunnel. The temple has huge acres of paddy fields in revenue records to feed hundreds of people every day.</p>
+    </div>
+    
+    <div id="menu1" class="tab-pane fade">
+      <h2>Vakathanam Valiyapalli</h2>
+      <img src="vakathanampalli.jpg" width="300" height="200">
+      <p>Welcome to Vakathanam Valiyapalli...In ancient times Vakathanam was ruled by Kings of Thekkumkur. Njaliakuzhy was the place where the culprits were executed by hanging. The surrounding places are Puthupally, Thenganal, Kurumbanadam and Thottakad. Most of the people residing here are Syrian Christians. The Syrian Orthodox Church is the numerically biggest Christian denomination in Vakathanam. St. John's Syrian Orthodox Church is the oldest Christian Church, built in 1847, until which year the Orthodox faithful had Puthupally Church as their parish. Yuhanon Mar Severious, Perumpally Thirumeni and Parekulathu Yakub Mar Themothios Thrumeni, Geevarghese Mar Ivanious, Founder of Mar Baselious Dayara, Njaliakuzhy Geevarghese Mar Coorilos of Niranam Dioscese of Jacobite Syian Orthodox Church are bishops from vakathanam. Syrian Orthodox Christians are the second largest Christian community in Kerala and they trace their origins to the mission of St. Thomas in South India in the second half of the first century AD. Later by Third Century St. Thomas Christians received priesthood from Syriac Orthodox Church of Antioch. The first Dayara and Seminary in Vakathanam was Mor Sharbil Dayara, Thrikothamangalam and is established in 1925 by Michael Mor Dionysius, Metropolitan of Southern Dioscese of Syrian Orthodox Church or Jacobite Syrian Orthodox Church (Not to confuse with Malankara Orthodox Syrian Church). It was the Seminary and Dioscese Headquarters of Jacobite Syriac Orthodox Church for some long years. During its Golden age Dayara had more than 100 theological students there to learn theology and Syriac. Services of C. V George Cor-Episcopa, Chirathalatt who was the student of this Dayara is notable to Vakathanam community as the founder of Jerushalem Mount Higher secondary School and many other developmental activities. St. John's Orthodox Valiyapally, Vakathanam is the Thalapally[clarification needed] to most of the Malankara Orthodox parishes. Founded about the year 1847, the parish celebrated its 150th Anniversary (sesquicentuary) in 1997-1998. Manikandapuram temple (which is mentioned also in Unnuneeli Sandesam, written in the 14th century) is the most ancient religious worship centre, built by the Thekumkur Kings probably in the 14th century.[2] The Knanaya Christians had their parish in Kottayam Valiyapally and Kottayam Edacattu Church, until the construction of Puthussery church for the Knanaya Jacobites in 1870 and St Mathew's Catholic Church for Knanaya Catholics in 1910 at Njaliakuzhy. Besides the members of the above-mentioned Churches, the believers of the Catholic Church, Syrian Orthodox Church (the famous St. Adai's church, Nalunnakal to this Church), Malankara Marthoma Syrian Church, CSI Church, St Marys Catholic church eravuchira, PRDS Church, Thottakkad and Salvation Army Church Thottakkad. Jacobite and Orthodox churches in thrikothamangalam are also present and active at Vakathanam.[3] Mar Baselious Dayara is a monastery built by late Metrapolitan Ghevarghese Mar Ivanios is a place of meditation located at Thattumpuram Kunnu, near to Njaliyakuzhy. There are also Pentecostal churches in Vakathanam and Thottakkad.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Panachikkadu Dakshina Mookambika Temple</h2>
+      <img src="panachikkad.jpg" width="300" height="200">
+      <p>The Panachikkadu Temple, also known as the Dakshina Mookambika (Mookambika of the South) Temple, is a Hindu temple dedicated to the goddess Saraswati. The temple is located in the southern region of the Indian Peninsula, in Panachikkad in Kottayam District, Kerala, India. It is one of the most prominent Saraswati temples for devotees in Kerala. But, the main deity of the temple is Lord Vishnu, who was installed long before Goddess Saraswati. Still the temple is known as Saraswati temple, due to the popularity of the Goddess. There are sub-shrines for Lord Shiva, Lord Ganapathi, Lord Ayyappan, Snake deities and Panachikkattu Yakshi inside the temple.Kottarathil Sankunni's Aithihyamala[1] has a detailed description of the temple, which has more than a thousand years of history. Nambudiri of Kizhapuram Illam had no male heirs to carry out the rites. He was about 60 years of age and had lost all hope of having a son. He set off to Varanasi to take a bath in the holy River Ganges. On the way, he stopped at Mookambika and stayed there for a few days and prayed to his deity. The serenity of the place enamored him and he decided to chant bhajans there for a year. After spending a year in the temple, the old man dreamed of a beautiful woman who appeared and told him that it was impossible for him to have a child in this life, and told him that it would be better for him to go back to his home and adopt a child from a family Karunattu nearby. The woman of that family would be destined to have two children in the near future. The old man accepted his fate and returned to his homeland.
+
+        Upon reaching Panachikkadu, he decided to take a bath in the temple pond. He put his Olakuda (umbrella made of palm leaves), on the southern side of the temple and went to bathe. After the bath, he tried to pick up his umbrella, but he couldn't. The Nambudiri stood puzzled. Then a man magically materialized and explained to the Nambudiri that the Goddess Mookambika Devi was staying in the umbrella and that the Nambudiri would have to transfer the divinity to an idol before he could retrieve the umbrella. He also told the Nambudiri that an idol suitable for transfer was lying hidden in the nearby forest. He warned him that he would have to appease its protector, a Yakshi, before taking the idol. The Nambudiri did as he was told and the Goddess Panachikkadu Devi was established as the deity of the place. Another smaller idol was placed facing west as Archana Bimbam. The idol was erected in a low terrain filled with water without a roof, making it seem as if the Devi was seated in the middle of a pond.
+        
+        The main deity is now covered with creepers and shrubs and is not clearly visible. The leaves of the creepers are considered Saraswati leaves. The spring water flows continuously until it touches the feet of the Devi. This water never dries, not even in the peak time of summer. Since the Devi remains on such a saras (small rivulet), the Goddess is called Saraswati. The water required for pooja and other needs is drawn from the spring. No other water sources seem to exist.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d251846.33586281876!2d76.6137873!3d9.5001187!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062ec4569a0e29%3A0xd48779a84bc0ebbe!2sPanaykkal%20Kaavu%20Sree%20Bhagavathi%20Kshethram!5e0!3m2!1sen!2sin!4v1648126008700!5m2!1sen!2sin" width="1520" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p> © 2022 PanakkalKavu Devi Temple. All Rights Reserved | Design By<a href="https://instgrm.com/indhuchoodn_r?utm_medium=copy_link" data-toggle="tooltip" title=""> itechneo</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
